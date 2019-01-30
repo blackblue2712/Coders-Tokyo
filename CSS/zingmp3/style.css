@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+	margin: 0; padding: 0;
+}
+a{
+	text-decoration: none;
+}
+
+/*==========================HEADER MENU==========================*/
+/*.header{
+	height: 100px;
+}
+.container::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.container .sidebar{
+	float: left;
+	width: 20%;
+}
+.container .main{
+	margin-left: 20%;
+}
+.footer{
+	height: 100px;
+}*/
+.wraper{
+	display: grid;
+	grid-template-columns: 3fr 1fr; /*fraction (1/3) - (70% 30%)*/
+}
+.header{
+	grid-column: 1/3; /* Chiếm cả 3 cột*/
+}
+.wraper .sidebar{
+	
+}
+.container .main{
+
+}
+.wraper .footer{
+	grid-column: 1/3; /* Chiếm cả 3 cột*/
+}
+
+
+
+/*==========================HEADER MENU==========================*/
+ul.menu{
+	list-style: none;
+	padding : 0;
+	display: flex;
+
+}
+ul.menu li{
+	padding: 8px 16px;
+	background-color: #EEE;
+	margin-right: 4px;
+}
+ul.menu li:hover{
+	background-color: #DDD;
+}
+li.has-submenu{
+	position: relative;
+}
+li.has-submenu a{
+	padding: 100%;
+}
+li.has-submenu:hover ul.sub-menu{
+	display: block;
+}
+li.has-submenu ul.sub-menu{
+	position: absolute;
+	list-style: none;
+	padding: 0px;
+	left: 0px;
+	top: 100%;
+	display: none;
+}
+
+
+/*==========================ZING-CHAR-SONG==========================*/
+.weekly-item{
+	font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+	display: flex;
+	border-bottom: 1px solid #EEE;
+	padding: 12px 0px;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.weekly-item-number{
+	font-size: 20px;
+	padding: 0px 8px;
+	color: #000;
+}
+.weekly-item-info{
+	flex-grow: 1;
+}
+.weekly-item-info .info-singer{
+	font-size: 12px;
+	color: #888;
+	text-transform: capitalize;
+}
+.weekly-item-info .info-title-song{
+	font-size: 14px;
+	text-transform: capitalize;
+}
+.weekly-view-count{
+	font-size: 12px;
+	color: #888;
+	padding: 0px 8px;
+}
+
+/*==========================ZING-CHAR-MV==========================*/
+
+.weekly-item-ab{
+	height: 110px;
+	display: flex;
+	font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #EEE;
+}
+
+.weekly-item-ab .ab-album{
+	color: #fff;
+	font-size: 20px;
+	height: 110px;
+	width: 110px;
+	background: url(https://loremflickr.com/320/240) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.weekly-item-ab .ab-layout{
+	height: 100%;
+	background: linear-gradient(0deg, rgba(2,0,13,0.8) 0%, rgba(0,8,10,0) 100%);
+	display: flex;
+	align-items: flex-end;
+	padding: 0px 0px 8px 4px;
+	box-sizing: border-box;
+}
+
+.weekly-item-ab .ab-info{
+	margin-left: 12px;
+}
+.weekly-item-ab .ab-info > div{
+	margin-bottom: 6px;
+}
+.weekly-item-ab .ab-title{
+	font-size: 14px;
+	text-transform: capitalize;
+}
+.weekly-item-ab .ab-singer{
+	font-size: 12px;
+	color: #888;
+	text-transform: capitalize;
+}
+.weekly-item-ab .ab-view-count{
+	font-size: 12px;
+	color: #888;
+}
+
+/*============================ALBUM_HOT============================*/
+.weekly-ab-square .ab-album{
+	color: #fff;
+	font-size: 20px;
+	height: 110px;
+	width: 110px;
+	background: url(https://loremflickr.com/320/240) no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.weekly-ab-square .ab-layout{
+	background: rgba(0, 0, 0, 0.4);
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	font-size: 10px;
+	transition: 0.5s;
+}
+.weekly-ab-square .ab-layout img{
+	width: 60px;
+	height: 60px;
+	transform: scale(0.6);
+	transition: 0.5s;
+}
+.weekly-ab-square .ab-layout:hover{
+	opacity: 1;
+	font-size: 40px;
+}
+.weekly-ab-square .ab-layout:hover img{
+	transform: scale(1);
+}

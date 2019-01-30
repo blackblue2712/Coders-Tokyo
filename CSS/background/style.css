@@ -1,0 +1,12 @@
+div.item{
+	padding: 20px 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	height: 200px;
+}
+div.bg-attachment{
+    background-image: url(bg.jpg);
+    background-position: -265px -180px;
+    background-size: 126%;
+    background-attachment: fixed;
+}

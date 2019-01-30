@@ -1,0 +1,39 @@
+/**
+ * flex-direction: row*, column
+ * justify-content: flex-start*, flex-end, center, space-between, space-around, space-evenly
+ * align-items: flex-start, flex-end, center, baseline, stretch*
+ */
+
+/**
+ * flex-basis: <length>
+ * flex-grow: <number> | Chia lại khoảng trống cho các thẻ có định dạng flex-grow.
+ * Ví dụ còn dư 300px khoảng trống, đem chia cho 3 (flex-grow: 1 ở mỗi thẻ con) thì mỗi thằng +100px
+ * Còn chia cho 6(flex-grow: 1, flex-grow: 2, flex-grow: 3) thì 1 sẽ được 50px, 2 được 100px, 3 được 150px
+ * Nếu để 1 thẻ flex-grow: 1 còn các thẻ còn lại không để thì thẻ đó sẽ nhận hết khoảng trống
+ */
+
+
+body{
+	background-color: #DDD;
+}
+.container{
+	display: flex;
+	background-color: #EEE;
+	flex-direction: row;
+	height: 200px;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.container .child-1{
+	background-color: red;
+	flex-basis: 150px;
+}
+.container .child-2{
+	background-color: green;
+	flex-basis: 200px;
+	flex-grow: 1;
+}
+.container .child-3{
+	background-color: blue;
+	flex-basis: 150px;
+}
