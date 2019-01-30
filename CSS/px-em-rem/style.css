@@ -1,0 +1,15 @@
+/**
+ * px: Cho bao nhiêu thì là bao nhiêu, người dùng vào setting thay đổi cỡ font vẫn không đổi (not friendly);
+ * em: 1em là bằng với font của cha nó (wrap nó đầu tiên), 2em thì gấp đôi;
+ * rem: 2rem là gấp đôi font-size so với document. Người dùng thay đổi font-size thì nó cũng thay đổi theo (friendly);
+ */
+
+.px{
+	font-size: 32px;
+}
+.em{
+	font-size: 2em;
+}
+.rem{
+	font-size: 2rem;
+}
