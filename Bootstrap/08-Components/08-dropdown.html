@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../libs/css/bootstrap.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+    <div id="myDropdown" class="dropdown show">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown link
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+    
+
+    <!-- Split dropright button -->
+    <div class="btn-group dropright">
+      <button type="button" class="btn btn-secondary btn-sm">
+        Split dropright
+      </button>
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropright</span>
+      </button>
+      <div class="dropdown-menu">
+         <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </div>
+
+    <script src="../libs/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../libs/js/popper.min.js"></script>
+    <script src="../libs/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      // $("#myDropdown").dropdown('update')
+      $('#myDropdown').on('show.bs.dropdown', function () {
+        // alert(1)
+        // Bấm vào nút dropdown
+      })
+      $('#myDropdown').on('hide.bs.dropdown', function () {
+        // alert(1)
+      })
+    </script>
+  </body>
+</html>

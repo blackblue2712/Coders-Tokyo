@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../libs/css/bootstrap.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <p class="display-4">Have method ($('...').alert('close'), ...</p>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Well done!</h4>
+      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+      <hr>
+      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+
+
+    <div id="myAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+
+    <script src="../libs/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../libs/js/popper.min.js"></script>
+    <script src="../libs/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      // closed.bs.alert: This event is fired when the alert has been closed (will wait for CSS transitions to complete).
+      // close.bs.alert:  This event fires immediately when the close instance method is called.
+      $('#myAlert').on('closed.bs.alert', function () {
+        alert(1);
+      })
+    </script>
+  </body>
+</html>
