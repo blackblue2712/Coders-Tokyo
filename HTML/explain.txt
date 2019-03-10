@@ -1,0 +1,8 @@
+-- Start a static server
+	+ static-server (node)
+	+ php -S localhost:port
+	+ python -m SimpleHTTPServer port
+
+-- Tunel
+	+ ./ngrok http 8080
+

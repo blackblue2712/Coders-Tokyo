@@ -1,0 +1,6 @@
+extends ../layouts/common
+block content
+	form(action="/users/create" method="POST")
+		label User name
+		input(type="text" name="name")
+		button Submit
