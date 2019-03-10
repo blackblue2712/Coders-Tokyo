@@ -2,23 +2,10 @@
   "users": [
     {
       "name": "linz",
-      "id": "31b9ce"
-    },
-    {
-      "name": "blue",
-      "id": "a67f4f"
-    },
-    {
-      "name": "black",
-      "id": "c4609b"
-    },
-    {
-      "name": "Mio",
-      "id": "249e0b"
-    },
-    {
-      "name": "Dang",
-      "id": "61a297"
+      "id": "31b9ce",
+      "phone": "0393123213",
+      "email": "linz@gmail.com",
+      "password": "e10adc3949ba59abbe56e057f20f883e"
     }
   ]
 }

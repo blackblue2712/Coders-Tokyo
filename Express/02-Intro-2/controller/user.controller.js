@@ -29,6 +29,10 @@ module.exports.getCreate  = function (req, res) {
 
 module.exports.postCreate = function (req, res) {
 	req.body.id = shortid.generate();
+	
+	// test res.locals
+	console.log(res.locals);
+
 	db.get('users').push(req.body).write();
 	res.redirect('/');
 }
