@@ -1,9 +1,11 @@
-const db = require('../db')
+const db = require('../db');
 const shortid = require('short-id');
+const User = require('../models/user.model');
 
-module.exports.index = function (req, res) {
+module.exports.index = async function (req, res) {
+	var users = await User.find();
 	res.render('users/index', {
-		users: db.get('users').value()
+		users: users
 	});
 }
 
@@ -28,6 +30,7 @@ module.exports.getCreate  = function (req, res) {
 }
 
 module.exports.postCreate = function (req, res) {
+	req.body.avatar = req.file.path.split('/').slice(1).join('/');
 	req.body.id = shortid.generate();
 	
 	// test res.locals
@@ -37,11 +40,10 @@ module.exports.postCreate = function (req, res) {
 	res.redirect('/');
 }
 
-module.exports.getInfo = function (req, res) {
+module.exports.getInfo = async function (req, res) {
 	var idUser = (req.params.id);
-	var userView = db.get('users').find({id: idUser}).value();
-	console.log(userView)
+	var user = await User.findOne({_id: idUser});
 	res.render('users/view', {
-		user: userView
+		user: user
 	});
 }

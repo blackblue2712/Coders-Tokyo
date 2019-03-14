@@ -1,0 +1,13 @@
+extends ../layouts/common
+block content
+	.container.mt-5
+		h1 New Transfer
+		form(method="POST")
+			.form-group
+				input(type="hidden" value= csrfToken, name="_csrf")
+				label(for="account") Account
+				input#name.form-control(type="text" name="account")
+			.form-group
+				label(for="money") Money
+				input#phone.form-control(type="number" name="money")
+			button.btn.btn-primary Submit

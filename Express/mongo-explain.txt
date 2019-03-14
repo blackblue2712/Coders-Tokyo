@@ -1,0 +1,5 @@
+mongo
+	-show databases
+	-use <db name>
+	-show collections
+	-db.users.find()  (show all user in users row)
